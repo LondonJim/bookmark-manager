@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/becky/work/bookmark/spec/bookmark_spec.rb": [
+      "/Users/js/projects/week4/bookmark-manager/spec/bookmark_spec.rb": [
         1,
         null,
         1,
@@ -9,20 +9,22 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
         null,
-        null,
-        null,
-        null
-      ],
-      "/Users/becky/work/bookmark/spec/features/index_spec.rb": [
-        1,
-        1,
-        1,
-        1,
         null,
         null
       ],
-      "/Users/becky/work/bookmark/spec/features/view_bookmarks_spec.rb": [
+      "/Users/js/projects/week4/bookmark-manager/spec/features/index_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/js/projects/week4/bookmark-manager/spec/features/view_bookmarks_spec.rb": [
         1,
         1,
         1,
@@ -34,6 +36,6 @@
         null
       ]
     },
-    "timestamp": 1535464798
+    "timestamp": 1535475713
   }
 }

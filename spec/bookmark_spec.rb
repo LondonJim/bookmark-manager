@@ -1,11 +1,13 @@
 require "bookmark"
 
 describe Bookmark do
-  describe "#self.all" do
-    it "returns an array of bookmarks" do
-      subject = described_class
-      expect(subject.all).to eq ["https://google.com", "https://apple.com", "https://netflix.com",  "https://amazon.com"]
+  describe ".all" do
+    it "returns a list of bookmarks" do
+      bookmarks = Bookmark.all
+      expect(bookmarks).to include "https://www.makersacademy.com"
+      expect(bookmarks).to include "https://www.google.com"
+      expect(bookmarks).to include "http://www.destroyallsoftware.com"
+      expect(bookmarks).to include "https://www.twitter.com"
     end
   end
-
 end
