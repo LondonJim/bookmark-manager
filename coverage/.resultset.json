@@ -4,15 +4,32 @@
       "/Users/js/projects/week4/bookmark-manager/spec/bookmark_spec.rb": [
         1,
         null,
-        1,
-        1,
-        1,
-        1,
-        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         1,
         1,
         null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -31,11 +48,10 @@
         1,
         1,
         1,
-        1,
         null,
         null
       ]
     },
-    "timestamp": 1535475713
+    "timestamp": 1535565532
   }
 }
