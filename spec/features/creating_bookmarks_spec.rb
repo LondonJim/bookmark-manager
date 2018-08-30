@@ -5,8 +5,7 @@ feature 'Adding a new bookmark' do
     fill_in('url', with: 'http://testbookmark.com')
     fill_in('title', with: 'Test Bookmark')
     click_button('Submit')
-
-    expect(page).to have_content('http://testbookmark.com')
+    expect(page).to have_content('Test Bookmark') #is a link to the url in index.erb
   end
 
   scenario 'The bookmark must be a valid URL' do

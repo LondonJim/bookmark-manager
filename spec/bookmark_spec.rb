@@ -10,10 +10,13 @@ describe Bookmark do
       Bookmark.create(url: "http://www.google.com", title: "Google")
 
       bookmarks = Bookmark.all
+      bookmark = Bookmark.all.first
 
-      expect(bookmarks).to include('http://www.makersacademy.com')
-      expect(bookmarks).to include('http://www.destroyallsoftware.com')
-      expect(bookmarks).to include('http://www.google.com')
+      expect(bookmarks.length).to eq 3
+      expect(bookmark).to be_a Bookmark
+      expect(bookmark).to respond_to(:id)
+      expect(bookmark.title).to eq 'Makers'
+      expect(bookmark.url).to eq 'http://www.makersacademy.com'
     end
   end
 
@@ -21,7 +24,9 @@ describe Bookmark do
     it 'creates the bookmark' do
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       bookmark = Bookmark.all.first
-      expect(Bookmark.all).to include 'http://www.testbookmark.com'
+      expect(bookmark).to respond_to(:id)
+      expect(bookmark.url).to eq 'http://www.testbookmark.com'
+      expect(bookmark.title).to eq 'Test Bookmark'
     end
 
     it 'validates the URL' do
