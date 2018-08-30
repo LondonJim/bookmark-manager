@@ -8,12 +8,12 @@ As a user
 So I can easily retrieve bookmarked pages  
 I want to be able to see a list of bookmarks  
 
-As a time-pressed user  
+As a user  
 So that I can save a website  
 I would like to add the site's address and title to bookmark manager  
 
 As a user
-So I can store bookmark data for later retrieval
+So I can keep my bookmark data for later
 I want to add a bookmark to Bookmark Manager
 
 Domain Model
