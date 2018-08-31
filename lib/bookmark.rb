@@ -12,12 +12,7 @@ class Bookmark
   end
 
   def self.all
-    if ENV['ENVIRONMENT'] == 'test'
-      connection = PG.connect(dbname: 'bookmark_manager_test')
-    else
-      connection = PG.connect(dbname: 'bookmark_manager')
-    end
-    result = connection.exec("SELECT * FROM bookmarks;")
+    result = database_connect.exec("SELECT * FROM bookmarks;")
     result.map do |bookmark|
       Bookmark.new(id: bookmark['id'], url: bookmark['url'], title: bookmark['title'])
     end
@@ -25,16 +20,28 @@ class Bookmark
 
   def self.create(url:, title:)
     return false unless is_url?(url)
+    result = database_connect.exec("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;")
+    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
+  end
+
+  def self.delete
+  end
+
+  def self.find
+  end
+
+  def self.update
+  end
+
+  private
+
+  def self.database_connect
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
       connection = PG.connect(dbname: 'bookmark_manager')
     end
-    result = connection.exec("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING id, title, url;")
-    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
-
-  private
 
   def self.is_url?(url)
     url =~ URI::DEFAULT_PARSER.regexp[:ABS_URI]

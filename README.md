@@ -16,6 +16,10 @@ As a user
 So I can keep my bookmark data for later
 I want to add a bookmark to Bookmark Manager
 
+As a user
+So I can remove my bookmark
+I want to delete a bookmark to Bookmark Manager
+
 Domain Model
 ---
 ![Domain Model] (https://www.dropbox.com/s/7liqm0kg86mslwe/domain-model.jpg?dl=1)

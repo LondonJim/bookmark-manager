@@ -62,6 +62,20 @@
         null,
         null
       ],
+      "/Users/js/projects/week4/bookmark-manager/spec/features/delete_bookmark_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/js/projects/week4/bookmark-manager/spec/features/index_spec.rb": [
         1,
         1,
@@ -89,6 +103,6 @@
         null
       ]
     },
-    "timestamp": 1535622520
+    "timestamp": 1535708114
   }
 }
